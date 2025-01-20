@@ -9,6 +9,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RectangleTest {
 
+    @ParameterizedTest
+    @ValueSource(doubles = {1, 1, 0.5, 0.5})
+    void creation(double value) throws Exception{
+        Rectangle rectangle = new Rectangle(value, 2);
+        assertNotNull(rectangle);
+
+        rectangle = new Rectangle(2, value);
+        assertNotNull(rectangle);
+
+        rectangle = new Rectangle(2, value);
+        assertNotNull(rectangle);
+
+        rectangle = new Rectangle(value, 2);
+        assertNotNull(rectangle);
+    }
+
     @Test
     void perimeter() throws Exception{
         Rectangle rectangle = new Rectangle(1,2);
@@ -24,7 +40,7 @@ class RectangleTest {
     }
 
     @ParameterizedTest
-    @ValueSource(doubles = {-1,-2, 0})
+    @ValueSource(doubles = {-1,-2, 0, 0})
     void exception(double value) {
         Exception exception = Assertions.assertThrows(Exception.class, () -> {
             Rectangle rectangle = new Rectangle(value, 2);
@@ -38,6 +54,11 @@ class RectangleTest {
 
         exception = Assertions.assertThrows(Exception.class, () -> {
             Rectangle rectangle = new Rectangle(2, value);
+        });
+        Assertions.assertEquals("Сторона прямоугольника не может быть меньше или равна нулю", exception.getMessage());
+
+        exception = Assertions.assertThrows(Exception.class, () -> {
+            Rectangle rectangle = new Rectangle(value, 2);
         });
         Assertions.assertEquals("Сторона прямоугольника не может быть меньше или равна нулю", exception.getMessage());
     }
