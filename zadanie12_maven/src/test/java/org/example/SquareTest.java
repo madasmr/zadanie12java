@@ -9,6 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
 
+    @ParameterizedTest
+    @ValueSource(doubles = {1, 0.5})
+    void creation(double value) throws Exception{
+        Square square = new Square(value);
+
+        assertNotNull(square);
+    }
+
     @Test
     void perimeter() throws Exception {
         Square square = new Square(1);
