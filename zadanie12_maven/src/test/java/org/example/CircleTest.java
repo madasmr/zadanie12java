@@ -8,6 +8,14 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 class CircleTest {
 
+    @ParameterizedTest
+    @ValueSource(doubles = {1, 0.5})
+    void creation(double value) throws Exception{
+        Circle circle = new Circle(value);
+
+        assertNotNull(circle);
+    }
+
     @Test
     void perimeter() throws Exception {
         Circle circle = new Circle(1);
