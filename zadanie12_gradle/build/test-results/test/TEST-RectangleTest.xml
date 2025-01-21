@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RectangleTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-01-21T12:54:02" hostname="DESKTOP-VKQVUAN" time="0.016">
+  <properties/>
+  <testcase name="area" classname="RectangleTest" time="0.0"/>
+  <testcase name="creation[0](0.5)" classname="RectangleTest" time="0.0"/>
+  <testcase name="creation[1](1)" classname="RectangleTest" time="0.0"/>
+  <testcase name="creation[2](0.5)" classname="RectangleTest" time="0.0"/>
+  <testcase name="creation[3](1)" classname="RectangleTest" time="0.0"/>
+  <testcase name="exception[0](-1)" classname="RectangleTest" time="0.0"/>
+  <testcase name="exception[1](0)" classname="RectangleTest" time="0.0"/>
+  <testcase name="exception[2](-1)" classname="RectangleTest" time="0.0"/>
+  <testcase name="exception[3](0)" classname="RectangleTest" time="0.0"/>
+  <testcase name="perimeter" classname="RectangleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
